@@ -1,0 +1,285 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* This makes the main content area grow to fill available space */
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section#home {
+    background: #5d8aa8;
+    color: #fff;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+section#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section#home p {
+    font-size: 1.2rem;
+}
+
+/* About Section */
+section#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+section#about p {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Portfolio Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: #eef;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.project p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.project:hover h3, .project:hover p {
+    color: #5d8aa8;
+}
+
+.project .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #5d8aa8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.project .project-link:hover {
+    background: #4c6e87;
+}
+
+.project4media  {
+	display: flex;
+	padding: 5px;
+}
+
+.project4media img {
+	display: flex;
+	padding-right: 20px;
+}
+
+.project4media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.paragraph {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.wrapper {
+	justify-content: center;
+	text-align: center;
+}
+
+.head {
+	padding-left: 17px;
+}
+
+/* Contact Section */
+#contact-form  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    font-size: 1.1rem;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border: none;
+    background: #5d8aa8;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact-form button:hover {
+    background: #4c6e87;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    margin-top: auto;
+}
+
+footer .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .socials a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer {
+    margin-left: auto;
+}
+
+/* Responsive Design */
+@media (max-width : 1680px ){
+    .project {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex: 1 1 calc(100% - 2rem);
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
+}
