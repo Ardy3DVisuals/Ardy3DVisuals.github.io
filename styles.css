@@ -179,7 +179,11 @@ section#about p {
 .head {
 	padding-left: 17px;
 }
-
+.projectitle {
+	justify-content:center;
+	text-align:center;
+	
+}
 /* Contact Section */
 #contact-form  {
     display: flex;
