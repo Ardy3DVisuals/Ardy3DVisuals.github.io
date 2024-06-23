@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <header>
@@ -29,6 +30,15 @@
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" required></textarea>
+
+                <!-- Honeypot field (hidden from users) -->
+                <div style="display:none;">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website">
+                </div>
+
+                <!-- Google reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
 
                 <button type="submit">Send Message</button>
             </form>
